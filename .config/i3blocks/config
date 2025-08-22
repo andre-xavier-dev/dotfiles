@@ -1,0 +1,8 @@
+[volume]
+command=~/.config/i3blocks/volume/volume.sh
+interval=once
+signal=10
+
+[time]
+command=~/.config/i3blocks/time/time.sh
+interval=5

@@ -30,25 +30,17 @@ install_pkg() {
 #-------------------------
 PKGS=(
     git
+    curl
     i3-wm
     i3lock
-    i3status
     i3blocks
     xss-lock
-    xterm
-    lightdm-gtk-greeter
-    lightdm
     dmenu
     firefox
     pavucontrol
     kitty
     unzip
-    xorg-xrandr
-    arandr
-    autorandr
     dunst
-    rtkit
-    curl
 )
 
 install_pkg "${PKGS[@]}"

@@ -22,10 +22,6 @@ exec --no-startup-id nm-applet
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
-
 # start a terminal
 bindsym $mod+Return exec kitty
 
@@ -121,7 +117,11 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id \
+  "i3-nagbar -t warning -m 'Choose an action:' \
+  -B '  Logout' 'pkill -f i3-nagbar; i3-msg exit' \
+  -B '  Suspend' 'pkill -f i3-nagbar; systemctl suspend' \
+  -B '  Poweroff' 'pkill -f i3-nagbar; systemctl poweroff'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

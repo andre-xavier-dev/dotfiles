@@ -49,6 +49,7 @@ PKGS=(
     dunst
     rtkit
     curl
+    pamixer
 )
 
 install_pkg "${PKGS[@]}"

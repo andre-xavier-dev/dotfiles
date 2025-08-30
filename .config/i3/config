@@ -2,7 +2,7 @@ set $mod Mod4
 
 font pango:JetBrainsMono Nerd Font 14
 
-#set keyboard layout
+# set keyboard layout
 exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl
 exec_always --no-startup-id xset r rate 150 50
 
@@ -30,6 +30,9 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
+
+# start flameshot
+bindsym Print exec flameshot gui
 
 # change focus
 bindsym $mod+j focus left

@@ -50,6 +50,7 @@ PKGS=(
     rtkit
     curl
     pamixer
+    flameshot
 )
 
 install_pkg "${PKGS[@]}"

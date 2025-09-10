@@ -3,10 +3,26 @@ My personal dotfiles.
 
 # Installation
 
-Clone the repository locally.
+Use `git` to clone the repository locally:
 
-Run the **dependencies.sh** script to install the required dependencies.
+```bash
+git clone git@github.com:andre-xavier-dev/dotfiles.git ~/.dotfiles
+```
 
-Run the **install.sh** script to apply all configs.
+Run the `install.sh` script to install all required packages, tools and fonts:
+```bash
+. install.sh
+```
 
-**(This overwrites all local configurations that conflict with this repo's configurations).**
+**The next step may overwrite all local configurations that conflict with this repo's configurations.**
+
+Run the `apply.sh` script to apply all configuration files:
+```bash
+. apply.sh
+```
+
+## Bonus
+Run the `optional.sh` script to install optional tools:
+```bash
+. optional.sh
+```

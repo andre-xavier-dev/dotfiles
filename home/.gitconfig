@@ -1,0 +1,28 @@
+[user]
+    name = Andre Xavier
+    email = 57808599+andre-xavier-dev@users.noreply.github.com
+    signingkey = ~/.ssh/github
+
+[core]
+    editor = nano
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+
+[color]
+    ui = auto
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    lg = log --oneline --graph --decorate --all
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/

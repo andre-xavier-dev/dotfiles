@@ -6,6 +6,14 @@ font pango:JetBrainsMono Nerd Font 14
 exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl
 exec_always --no-startup-id xset r rate 150 50
 
+# Window colors
+client.focused          #9370DB #2C003E #EDE7F6 #9370DB #EDE7F6
+client.focused_inactive #6A2EA0 #2C003E #EDE7F6 #6A2EA0 #EDE7F6
+client.unfocused        #4B0082 #2C003E #EDE7F6 #4B0082 #EDE7F6
+client.urgent           #FF6F91 #2C003E #EDE7F6 #FF6F91 #EDE7F6
+client.placeholder      #3A0066 #2C003E #EDE7F6 #3A0066 #EDE7F6
+client.background       #2C003E
+
 # Start XDG autostart .desktop files using dex.
 exec --no-startup-id dex --autostart --environment i3
 
@@ -128,30 +136,41 @@ bindsym $mod+Shift+e exec --no-startup-id \
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
+    
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+    
+    # back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
 bar {
-        status_command i3blocks
-        font pango:JetBrainsMono Nerd Font 14, Font Awesome 7 Free Solid
+    status_command i3blocks
+    font pango:JetBrainsMono Nerd Font 14, Font Awesome 7 Free Solid
+    colors {
+        background #1a0f3d
+        statusline #f3e5f5
+        separator  #9575cd
+        
+        focused_workspace  #9370DB #2C003E #EDE7F6
+        active_workspace   #6A2EA0 #2C003E #EDE7F6
+        inactive_workspace #4B0082 #2C003E #EDE7F6
+        urgent_workspace   #FF6F91 #2C003E #EDE7F6
+        binding_mode       #9575CD #2C003E #EDE7F6
+    }
 }
 
 # Custom windows
-for_window [class="kitty" title="calendar"] floating enable, resize set 450 300
-for_window [class="pavucontrol"] floating enable
+for_window [class="kitty" title="calendar"] floating enable, resize set 1200 800, move position center
+for_window [class="pavucontrol"] floating enable, resize set 1200 800, move position center

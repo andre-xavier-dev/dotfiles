@@ -20,9 +20,3 @@ Run the `apply.sh` script to apply all configuration files:
 ```bash
 . apply.sh
 ```
-
-## Bonus
-Run the `optional.sh` script to install optional tools:
-```bash
-. optional.sh
-```

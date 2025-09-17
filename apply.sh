@@ -6,10 +6,13 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/home"
 # Adding configs to the list
 # Paths are relative to home folder
 CONFIGS=(
+    ".gitconfig"
     ".config/i3/config"
     ".config/i3blocks/config"
     ".config/i3blocks/time/time.sh"
     ".config/i3blocks/volume/volume.sh"
+    ".config/kitty/kitty.conf"
+    ".config/kitty/current-theme.conf"
     ".bashrc"
     ".bash_profile"
     ".bash_aliases"

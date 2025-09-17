@@ -1,12 +1,14 @@
 #!/bin/sh
 
-# apt only, installs pamixer
+# Builds pamixer from source in apt
+
+# Install build dependencies
 sudo apt install -y build-essential cmake libpulse-dev git
 # Clone pamixer
 git clone https://github.com/cdemoulins/pamixer.git ~/pamixer
 cd ~/pamixer
 
-# Build and install pamixer
+# Build pamixer
 mkdir build && cd build
 cmake ..
 make
